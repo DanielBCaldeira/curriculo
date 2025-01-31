@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f0f8; /* Fundo rosa claro */
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #d36e96; /* Rosa suave */
+        }
+        .btn {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #f8a1c1; /* Rosa claro */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #f16c8f; /* Rosa escuro */
+        }
+        .curriculo {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .message {
+            font-size: 1.5em;
+            color: #FF6347;
+        }
+        h2, h3 {
+            color: #d36e96; /* Rosa suave para os títulos */
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ainda tem vaga pra ser o Amor da Sua Vida?</h1>
+        <button class="btn" id="simBtn">Sim</button>
+        <button class="btn" id="naoBtn">Não</button>
+
+        <div id="message" class="message"></div>
+        
+        <div id="curriculo" class="curriculo">
+            <h2>📄 CURRÍCULO DE NAMORO</h2>
+            <p><strong>📌 Nome:</strong> Daniel</p>
+            <p><strong>📅 Data de nascimento:</strong> 25/03/2001</p>
+            <p><strong>📍 Localização:</strong> Recife - PE</p>
+            <p><strong>📞 Contato:</strong> Respondo rápido no WhatsApp 😉</p>
+
+            <h3>🎯 Objetivo</h3>
+            <p>Conseguir uma vaga no coração da menina que mora muito longe de mim para compartilhar momentos incríveis, risadas aleatórias e talvez até dividir uma pizza (ou um milkshake, dependendo do dia).</p>
+
+            <h3>💖 Habilidades Românticas</h3>
+            <ul>
+                <li>✔ Memes e piadas ruins na hora certa (ou errada, depende do ponto de vista)</li>
+                <li>✔ Ótimo ouvinte e excelente em conselhos que nem eu sigo</li>
+                <li>✔ Especialista em bons dias e boas noites personalizados 🌙✨</li>
+                <li>✔ Habilidade avançada em sempre tentar tirar um sorriso</li>
+                <li>✔ Capacidade infinita de te elogiar sem repetir adjetivos</li>
+            </ul>
+
+            <h3>🏆 Experiências Amorosas</h3>
+            <ul>
+                <li>🔹 Treinado em longas conversas sobre qualquer assunto</li>
+                <li>🔹 Conhecimento avançado em "entender indiretas" (mas aceito atualizações 😂)</li>
+                <li>🔹 Especialização em fazer cafuné e abraços que resolvem qualquer problema</li>
+                <li>🔹 Mestre em planejar rolês incríveis (e maratonas de séries)</li>
+            </ul>
+
+            <h3>🎨 Interesses e Hobbies</h3>
+            <ul>
+                <li>💻 Programação e tecnologia (posso até criar um site só para você 👀)</li>
+                <li>🎶 Música (Jorge e Mateus sempre presente)</li>
+                <li>🍕 Comida (principalmente se for algo para dividir)</li>
+                <li>📚 Aprender coisas novas para fazer você cada vez mais feliz</li>
+            </ul>
+
+            <h3>🔥 Diferenciais</h3>
+            <ul>
+                <li>✅ Alta taxa de resposta no WhatsApp 📱</li>
+                <li>✅ Personalidade 100% original, sem cópias no mercado 😆</li>
+                <li>✅ Compatível com longas conversas e risadas inesperadas</li>
+            </ul>
+
+            <h3>📌 Disponibilidade</h3>
+            <ul>
+                <li>🔹 Horário flexível para encontros, chamadas e mensagens inesperadas 😏</li>
+                <li>🔹 Sempre disponível para um bom papo e momentos inesquecíveis</li>
+            </ul>
+
+            <h3>📝 Referências:</h3>
+            <p>Pessoas que já riram das minhas piadas podem confirmar minha qualidade como candidato.</p>
+
+            <p><strong>📩 Para mais informações, é só chamar! 😜💕</strong></p>
+        </div>
+    </div>
+
+    <script>
+        const simBtn = document.getElementById('simBtn');
+        const naoBtn = document.getElementById('naoBtn');
+        const curriculo = document.getElementById('curriculo');
+        const message = document.getElementById('message');
+
+        simBtn.addEventListener('click', () => {
+            curriculo.style.display = 'block';
+            message.style.display = 'none';
+        });
+
+        naoBtn.addEventListener('click', () => {
+            message.textContent = 'Mesmo assim vou me candidatar!';
+            message.style.display = 'block';
+            setTimeout(() => {
+                curriculo.style.display = 'block';
+            }, 2000);  // Espera 2 segundos antes de mostrar o currículo
+        });
+    </script>
+</body>
+</html>
